@@ -96,6 +96,8 @@
     vim 
     wget
     curl
+    xdg-utils
+    pass
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
