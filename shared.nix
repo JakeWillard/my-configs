@@ -41,6 +41,23 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # Remove some default GNOME packages.
+  environment.gnome.excludePackages = with pkgs; [
+    cheese      # photo booth
+    epiphany    # web browser
+    simple-scan # document scanner
+
+    # these should be self explanatory
+    gnome-calculator 
+    gnome-calendar 
+    gnome-characters
+    gnome-contacts
+    gnome-font-viewer 
+    gnome-logs 
+    gnome-maps 
+    pkgs.gnome-connections
+  ];
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -89,6 +106,15 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    
+    # gnome extensions
+    gnomeExtensions.burn-my-windows
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.caffeine
+    gnomeExtensions.pop-shell
+    gnomeExtensions.just-perfection
+
+    # misc
     zip
     xz
     unzip
