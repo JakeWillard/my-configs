@@ -46,8 +46,6 @@
     cheese      # photo booth
     epiphany    # web browser
     simple-scan # document scanner
-
-    # these should be self explanatory
     gnome-calculator 
     gnome-calendar 
     gnome-characters
@@ -112,7 +110,6 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
     gnomeExtensions.pop-shell
-    gnomeExtensions.just-perfection
 
     # misc
     zip
