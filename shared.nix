@@ -49,6 +49,7 @@
   # Remove some default GNOME packages.
   environment.gnome.excludePackages = with pkgs; [
     cheese      # photo booth
+    geary
     epiphany    # web browser
     simple-scan # document scanner
     gnome-calculator 
