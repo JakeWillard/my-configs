@@ -33,7 +33,7 @@
     git
     vscode
     vivaldi
-    zoom-us
+    # zoom-us
     julia
 
   ];
