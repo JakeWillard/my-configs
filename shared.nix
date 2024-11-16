@@ -110,12 +110,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    
-    # gnome extensions
-    gnomeExtensions.burn-my-windows
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.caffeine
-    gnomeExtensions.pop-shell
 
     # misc
     zip
