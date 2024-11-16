@@ -5,6 +5,7 @@
   networking.hostName = "desktop";
   programs.bash.shellAliases = {
     rebuild = "sudo nixos-rebuild switch --flake ~/my-configs/#desktop";
+    update = "sudo nix flake update --flake ~/my-configs";
   };
 
 
