@@ -7,7 +7,7 @@
 
   imports = [
     ./gtk/papirus-icons.nix
-    ./gnome/local.nix
+    ./gnome/home.nix
   ];
 
   # Packages that should be installed to the user profile.

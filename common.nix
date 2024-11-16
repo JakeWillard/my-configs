@@ -16,6 +16,9 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
+  # alias for updating the flake
+  program.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -94,6 +97,7 @@
   environment.systemPackages = with pkgs; [
 
     # misc
+    neofetch
     zip
     xz
     unzip
