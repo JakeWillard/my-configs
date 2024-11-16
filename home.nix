@@ -29,26 +29,26 @@
   dconf.settings = {
 
     # hot edges
-    "/org/gnome/mutter" = {
+    "org/gnome/mutter" = {
       edge-tiling = true;
     };
 
     # terminal shortcut
-    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Control><Alt>t";
       command = "xterm";
       name = "open-terminal";
     };
 
     # apply keyboard shortcuts
-    "/org/gnome/settings-daemon/plugins/media-keys" = {
+    "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
       ];
     };
 
     # gnome extensions
-    "/org/gnome/shell" = {
+    "org/gnome/shell" = {
 
       disable-user-extensions = false;
       enabled-extensions = [
