@@ -17,7 +17,7 @@
   boot.loader.grub.useOSProber = true;
 
   # alias for updating the flake
-  program.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
+  programs.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
