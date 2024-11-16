@@ -21,8 +21,8 @@
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       system = "x88_64-linux";
       modules = [ 
-        ./shared.nix 
-        ./desktop.nix
+        ./common.nix
+        ./hosts/desktop.nix
 
         inputs.stylix.nixosModules.stylix
         
@@ -38,8 +38,8 @@
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       system = "x88_64-linux";
       modules = [ 
-        ./shared.nix 
-        ./laptop.nix
+        ./common.nix 
+        ./hosts/laptop.nix
 
         inputs.stylix.nixosModules.stylix
         

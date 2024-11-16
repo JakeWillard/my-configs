@@ -5,61 +5,18 @@
   home.username = "jake";
   home.homeDirectory = "/home/jake";
 
-  # icons
-  gtk.enable = true;
-  gtk.iconTheme = {
-    name = "Papirus-Dark";
-    package = pkgs.papirus-icon-theme;
-  };
-
-  dconf.settings = {
-
-    # hot edges
-    "org/gnome/mutter" = {
-      edge-tiling = true;
-    };
-
-    # terminal shortcut
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Control><Alt>t";
-      command = "xterm";
-      name = "open-terminal";
-    };
-
-    # apply keyboard shortcuts
-    "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [
-        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-      ];
-    };
-
-    # enable gnome extensions
-    "org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = [
-        "burn-my-windows@schneegans.github.com"
-        "caffeine@patapon.info"
-        "pop-shell@system76.com"
-        "blur-my-shell@aunetx"
-      ];
-    };
-
-  };
+  imports = [
+    ./gtk/papirus-icons.nix
+    ./gnome/local.nix
+  ];
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    
-    # gnome extensions
-    gnomeExtensions.burn-my-windows
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.caffeine
-    gnomeExtensions.pop-shell
 
     nnn
     git
     vscode
     vivaldi
-    # zoom-us
     julia
 
   ];

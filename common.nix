@@ -4,7 +4,9 @@
 
 {
 
-  # Theme
+  imports = [ ./gnome/global.nix ];
+
+  # Stylix Theme
   stylix.enable = true;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
   stylix.image = ./wallpapers/space-lake.jpg;
@@ -41,26 +43,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Remove some default GNOME packages.
-  environment.gnome.excludePackages = with pkgs; [
-    cheese      # photo booth
-    geary
-    epiphany    # web browser
-    simple-scan # document scanner
-    gnome-calculator 
-    gnome-calendar 
-    gnome-characters
-    gnome-contacts
-    gnome-font-viewer 
-    gnome-logs 
-    gnome-maps 
-    pkgs.gnome-connections
-  ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
