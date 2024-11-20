@@ -7,7 +7,7 @@
 
   imports = [
     ./style/icons.nix
-    ./gnome/home.nix
+    ./desktop-environments/gnome-hm.nix
   ];
 
   # enable papirus icons

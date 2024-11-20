@@ -5,7 +5,7 @@
 {
 
   imports = [
-    ./gnome/global.nix
+    ./desktop-environments/gnome-sys.nix
     ./style/colors.nix
    ];
 
