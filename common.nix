@@ -4,12 +4,13 @@
 
 {
 
-  imports = [ ./gnome/global.nix ];
+  imports = [
+    ./gnome/global.nix
+    ./style/colors.nix
+   ];
 
-  # Stylix Theme
-  stylix.enable = true;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-  stylix.image = ./wallpapers/space-lake.jpg;
+  # choose color theme and wallpaper
+  colors.woodland = true;
 
   # Bootloader.
   boot.loader.grub.enable = true;

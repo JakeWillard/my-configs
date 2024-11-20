@@ -6,12 +6,13 @@
   home.homeDirectory = "/home/jake";
 
   imports = [
-    ./gtk/icons.nix
+    ./style/icons.nix
     ./gnome/home.nix
   ];
 
   # enable papirus icons
-  colloid-icons.enable = true;
+  icons.papirus = true;
+  #colloid-icons.enable = true;
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
