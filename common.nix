@@ -83,14 +83,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  # users.users.nobody = {
-  #   isNormalUser = true;
-  #   uid = 1511;
-  #   description = "nobody";
-  #   extraGroups = [ "networkmanager" "wheel" ];
-  # };
-  # services.xserver.displayManager.hiddenUsers = [ "nobody" ];
-
   # Install firefox.
   programs.firefox.enable = true;
 

@@ -30,7 +30,6 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.jake = import ./users/jake.nix;
-          home-manager.users.nobody = import ./users/nobody.nix;
         }
 
          ];
@@ -48,7 +47,6 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.jake = import ./users/jake.nix;
-          home-manager.users.nobody = import ./users/nobody.nix;
         }
 
          ];
