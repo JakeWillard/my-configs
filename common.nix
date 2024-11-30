@@ -5,7 +5,7 @@
 {
 
   imports = [
-    ./desktop-environments/fancy-gnome/sys.nix
+    ./desktop-environments/gnome/gnome-sys.nix
    ];
 
   # choose color theme and wallpaper
