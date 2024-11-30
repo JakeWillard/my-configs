@@ -5,12 +5,14 @@
   home.username = "jake";
   home.homeDirectory = "/home/jake";
 
-  imports = [
-    ./../desktop-environments/gnome/gnome-hm.nix
-  ];
+  # imports = [
+  #   ./../desktop-environments/gnome/gnome-hm.nix
+  # ];
 
-  # enable papirus icons
-  icons.papirus = true;
+  # # enable papirus icons
+  # icons.papirus = true;
+
+  imports = [ ./../desktop-environments/lightdm-i3/lightdm-i3-hm.nix ];
   #colloid-icons.enable = true;
 
   # Packages that should be installed to the user profile.
