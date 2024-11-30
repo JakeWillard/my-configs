@@ -6,11 +6,11 @@
   home.homeDirectory = "/home/jake";
 
   imports = [
-    ./../desktop-environments/deepin/deepin-hm.nix
+    ./../desktop-environments/gnome/gnome-hm.nix
   ];
 
   # enable colloid icons
-  # icons.colloid = true;
+  icons.colloid = true;
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
