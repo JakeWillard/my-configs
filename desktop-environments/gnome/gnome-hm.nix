@@ -45,7 +45,6 @@
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = [
-            "burn-my-windows@schneegans.github.com"
             "caffeine@patapon.info"
             "pop-shell@system76.com"
             "blur-my-shell@aunetx"
