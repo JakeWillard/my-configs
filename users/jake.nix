@@ -6,8 +6,7 @@
   home.homeDirectory = "/home/jake";
 
   imports = [
-    ./../style/icons.nix
-    ./../desktop-environments/gnome-hm.nix
+    ./../desktop-environments/fancy-gnome/hm.nix
   ];
 
   # enable papirus icons
