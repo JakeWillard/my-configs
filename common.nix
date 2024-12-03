@@ -4,12 +4,11 @@
 
 {
 
+  # import gnome config
   imports = [
     ./desktop-environments/gnome/gnome-sys.nix
    ];
 
-  # choose color theme and wallpaper
-  colors.woodland = true;
 
   # Bootloader.
   boot.loader.grub.enable = true;
