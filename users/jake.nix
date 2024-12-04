@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   # TODO please change the username & home directory to your own
@@ -22,6 +22,22 @@
     julia
 
   ];
+
+  # make vivaldi default browser
+  home.sessionVariables.BROWSER = "vivaldi";
+
+  # choose kitty as main terminal
+  gnome-hm.terminal = "kitty";
+
+  # configure kitty
+  programs.kitty = lib.mkForce {
+    enable = true;
+    settings = {
+      confirm_os_window_close = 0;
+      dynamic_background_opacity = true;
+      background_opacity = "0.5";
+    };
+  };
 
   # configure git
   programs.git = {

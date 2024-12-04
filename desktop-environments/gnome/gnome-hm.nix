@@ -6,6 +6,11 @@
 
     gnome-hm.colloid = lib.mkEnableOption "Colloid Icons";
     gnome-hm.papirus = lib.mkEnableOption "Papirus Icons";
+    gnome-hm.terminal = lib.mkOption {
+      type = lib.types.str;
+      default = "xterm";
+
+    };
     
   };
 
@@ -13,10 +18,10 @@
   config = {
 
     gtk.enable = true;
-    gtk.iconTheme = lib.optionalAttrs config.icons.colloid {
+    gtk.iconTheme = lib.optionalAttrs config.gnome-hm.colloid {
       name = "Colloid";
       package = pkgs.colloid-icon-theme;
-    } // lib.optionalAttrs config.icons.papirus {
+    } // lib.optionalAttrs config.gnome-hm.papirus {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
@@ -32,7 +37,7 @@
       # terminal shortcut
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
         binding = "<Control><Alt>t";
-        command = "xterm";
+        command = "${config.gnome-hm.terminal}";
         name = "open-terminal";
       };
 
@@ -73,6 +78,13 @@
       gnomeExtensions.pop-shell
 
   ];
+
+  # set default programs
+  home.sessionVariables = {
+    EDITOR = "gnome-text-editor";
+    TERMINAL = "${config.gnome-hm.terminal}";
+  };
+
 
 
 
