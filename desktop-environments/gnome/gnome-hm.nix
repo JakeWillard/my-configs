@@ -34,10 +34,18 @@
         name = "open-terminal";
       };
 
+      # wallpaper shortcut
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+        binding = "<Control><Alt>w";
+        command = "bash -i -c 'draw'";
+        name = "generate-new-wallpaper";
+      };
+
       # apply keyboard shortcuts
       "org/gnome/settings-daemon/plugins/media-keys" = {
         custom-keybindings = [
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
           ];
       };
 
