@@ -12,12 +12,10 @@
   # enable colloid icons
   gnome-hm.colloid = true;
 
-  # Packages that should be installed to the user profile.
+  # Packages that I'm not going to configure with nix
   home.packages = with pkgs; [
 
     nnn
-    git
-    vscode
     vivaldi
     julia
 
@@ -37,6 +35,18 @@
       dynamic_background_opacity = true;
       background_opacity = "0.5";
     };
+  };
+
+  # configure vscode
+  programs.vscode = {
+    enable = true;
+    enableExtensionUpdateCheck = false;
+    enableUpdateCheck = false;
+    extensions = with pkgs.vscode-extensions; [
+      andrsdc.base16-themes
+      julialang.julia
+      microsoft.python
+    ];
   };
 
   # configure git
