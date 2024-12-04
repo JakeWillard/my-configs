@@ -16,8 +16,6 @@
 
     nnn
     vivaldi
-    julia
-    conda
 
   ];
 
