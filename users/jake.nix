@@ -10,7 +10,7 @@
   ];
 
   # enable colloid icons
-  icons.colloid = true;
+  gnome-hm.colloid = true;
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [

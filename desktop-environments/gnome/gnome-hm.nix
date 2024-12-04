@@ -3,8 +3,10 @@
 {
 
   options = {
-    icons.colloid = lib.mkEnableOption "Colloid Icons";
-    icons.papirus = lib.mkEnableOption "Papirus Icons";
+
+    gnome-hm.colloid = lib.mkEnableOption "Colloid Icons";
+    gnome-hm.papirus = lib.mkEnableOption "Papirus Icons";
+    
   };
 
 

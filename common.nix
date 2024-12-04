@@ -1,5 +1,4 @@
 
-
 { config, pkgs, ... }:
 
 {
@@ -8,6 +7,9 @@
   imports = [
     ./desktop-environments/gnome/gnome-sys.nix
    ];
+
+  # find base16 schemes here: https://tinted-theming.github.io/base16-gallery/
+  gnome-sys.scheme = "caroline";
 
 
   # Bootloader.

@@ -102,5 +102,5 @@ def make_plot(path):
 
 if __name__ == '__main__':
 
-    make_plot("/home/jake/.test.png")
+    make_plot("/home/jake/.wallpaper.png")
 ''

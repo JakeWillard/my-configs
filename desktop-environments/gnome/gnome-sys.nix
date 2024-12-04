@@ -61,11 +61,11 @@
 
   environment.systemPackages = [
 
-    (import ./wallpaper.nix {inherit pkgs; colors=config.lib.stylix.colors.withHashtag;})
+    (import ./draw-wallpaper.nix {inherit pkgs; colors=config.lib.stylix.colors.withHashtag;})
 
   ];
 
-  programs.bash.shellAliases.draw = "draw-wallpaper; gsettings set org.gnome.desktop.background picture-uri 'file:///home/jake/.test.png'; gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/jake/.test.png'";
+  programs.bash.shellAliases.draw = "draw-wallpaper; gsettings set org.gnome.desktop.background picture-uri 'file:///home/jake/.wallpaper.png'; gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/jake/.wallpaper.png'";
 
 };
 
