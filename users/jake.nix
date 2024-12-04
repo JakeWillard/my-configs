@@ -1,7 +1,6 @@
 { lib, config, pkgs, ... }:
 
 {
-  # TODO please change the username & home directory to your own
   home.username = "jake";
   home.homeDirectory = "/home/jake";
 
@@ -42,10 +41,14 @@
     enable = true;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
-    extensions = with pkgs.vscode-extensions; [
-      andrsdc.base16-themes
-      julialang.julia
-      microsoft.python
+    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      # {
+      #   name = "julia";
+      #   publisher = "julialang";
+      #   version = "1.127.2";
+      #   sha256 = "0000000000000000000000000000000000000000000000000000";
+      # }
+
     ];
   };
 
