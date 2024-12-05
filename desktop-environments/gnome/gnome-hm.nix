@@ -17,6 +17,8 @@
 
   config = {
 
+    # help: https://determinate.systems/posts/declarative-gnome-configuration-with-nixos/
+
     gtk.enable = true;
     gtk.iconTheme = lib.optionalAttrs config.gnome-hm.colloid {
       name = "Colloid";
@@ -63,6 +65,12 @@
             "caffeine@patapon.info"
             "pop-shell@system76.com"
             "blur-my-shell@aunetx"
+        ];
+        favorite-apps = [
+          "vivaldi-stable.desktop"
+          "org.gnome.Nautilus.desktop"
+          "kitty.desktop"
+          "codium.desktop"
         ];
       };
 
