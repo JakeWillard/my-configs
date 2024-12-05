@@ -9,7 +9,7 @@
    ];
 
   # find base16 schemes here: https://tinted-theming.github.io/base16-gallery/
-  gnome-sys.scheme = "caroline";
+  gnome-sys.scheme = "mocha";
 
 
   # Bootloader.
