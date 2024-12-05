@@ -3,9 +3,9 @@
 
 {
 
-  # import gnome config
   imports = [
     ./desktop-environments/gnome/gnome-sys.nix
+    ./distrobox/distrobox-sys.nix
    ];
 
   # find base16 schemes here: https://tinted-theming.github.io/base16-gallery/
@@ -98,6 +98,7 @@
     curl
     xdg-utils
     pass
+    
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
