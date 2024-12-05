@@ -38,17 +38,12 @@
   # configure vscode
   programs.vscode = {
     enable = true;
+    package = pkgs.vscodium;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
-    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      # {
-      #   name = "julia";
-      #   publisher = "julialang";
-      #   version = "1.127.2";
-      #   sha256 = "0000000000000000000000000000000000000000000000000000";
-      # }
-
-    ];
+    extensions = with pkgs.vscode-extensions; [
+      jnoortheen.nix-ide
+  ];
   };
 
   # configure git
