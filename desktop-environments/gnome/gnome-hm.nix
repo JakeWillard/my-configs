@@ -65,6 +65,7 @@
             "caffeine@patapon.info"
             "pop-shell@system76.com"
             "blur-my-shell@aunetx"
+            "gsconnect@andyholmes.github.io"
         ];
         favorite-apps = [
           "vivaldi-stable.desktop"
@@ -86,6 +87,11 @@
       gnomeExtensions.pop-shell
 
   ];
+
+  services.kdeconnect = {
+    enable = true;
+    package = pkgs.gnomeExtensions.gsconnect;
+  };
 
   # set default programs
   home.sessionVariables = {
