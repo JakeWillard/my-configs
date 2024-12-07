@@ -4,7 +4,7 @@
 {
 
   imports = [
-    ./desktop-environments/gnome/gnome-sys.nix
+    ./gnome/gnome-sys.nix
     ./distrobox/distrobox-sys.nix
    ];
 
@@ -98,6 +98,7 @@
     curl
     xdg-utils
     pass
+    popsicle
     
   ];
 

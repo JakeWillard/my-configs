@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/jake";
 
   imports = [
-    ./../desktop-environments/gnome/gnome-hm.nix
+    ./../gnome/gnome-hm.nix
   ];
 
   # enable colloid icons
