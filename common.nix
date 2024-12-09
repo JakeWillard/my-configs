@@ -13,9 +13,11 @@
 
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.device = "/dev/sda";
+  # boot.loader.grub.useOSProber = true;
 
   # alias for updating the flake
   programs.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
@@ -45,6 +47,9 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # X11 keymap
+  services.xserver.xkb.layout = "us";
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -72,6 +77,7 @@
     isNormalUser = true;
     description = "jake";
     extraGroups = [ "networkmanager" "wheel" ];
+    initialPassword = "boop";
   };
 
   # Install firefox.
