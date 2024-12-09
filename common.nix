@@ -9,7 +9,7 @@
    ];
 
   # find base16 schemes here: https://tinted-theming.github.io/base16-gallery/
-  gnome-sys.scheme = "mocha";
+  gnome-sys.scheme = "marrakesh";
 
 
   # Bootloader.
@@ -47,8 +47,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # X11 keymap
-  services.xserver.xkb.layout = "us";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
