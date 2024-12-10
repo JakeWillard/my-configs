@@ -16,7 +16,8 @@
     build-container = "distrobox-assemble create --file /home/jake/my-configs/distrobox/manifest.ini";
     ubuntu-run = "distrobox enter ubuntu";
     zoom-install = ''
-      distrobox-enter --name ubuntu -- sudo dpkg -i ./zoom.deb
+      curl https://zoom.us/client/latest/zoom_amd64.deb -o ~/zoom.deb
+      distrobox-enter --name ubuntu -- sudo dpkg -i ~/zoom.deb
       distrobox-enter --name ubuntu -- sudo apt install -f
       distrobox-enter --name ubuntu -- sudo apt update
       distrobox-enter --name ubuntu -- sudo apt upgrade

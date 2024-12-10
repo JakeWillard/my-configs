@@ -28,7 +28,6 @@
   # configure starship
   programs.starship = {
     enable = true;
-
   };
   programs.bash.enable = true;
   programs.bash.shellAliases.liftoff = "eval '$(starship init bash)'";
