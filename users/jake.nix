@@ -25,6 +25,14 @@
   # choose kitty as main terminal
   gnome-hm.terminal = "kitty";
 
+  # configure starship
+  programs.starship = {
+    enable = true;
+
+  };
+  programs.bash.enable = true;
+  programs.bash.shellAliases.liftoff = "eval '$(starship init bash)'";
+
   # configure kitty
   programs.kitty = lib.mkForce {
     enable = true;
