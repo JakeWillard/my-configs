@@ -14,6 +14,14 @@
   # distrobox specific aliases
   programs.bash.shellAliases = {
     build-container = "distrobox-assemble create --file /home/jake/my-configs/distrobox/manifest.ini";
+    ubuntu-run = "distrobox enter ubuntu";
+    zoom-install = ''
+      distrobox-enter --name ubuntu -- sudo dpkg -i ./zoom.deb
+      distrobox-enter --name ubuntu -- sudo apt install -f
+      distrobox-enter --name ubuntu -- sudo apt update
+      distrobox-enter --name ubuntu -- sudo apt upgrade
+    '';
+    export-zoom = "distrobox-enter --name ubuntu -- distrobox-export --app zoom";
     install-julia = "distrobox-enter --name ubuntu -- curl -fsSL https://install.julialang.org | sh";
     julia = "distrobox-enter --name ubuntu -- /home/jake/.juliaup/bin/julia";
   };

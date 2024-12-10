@@ -16,7 +16,6 @@
 
     nnn
     vivaldi
-    zoom-us
 
   ];
 
