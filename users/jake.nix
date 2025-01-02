@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, system, inputs, ... }:
 
 {
   home.username = "jake";
@@ -16,11 +16,12 @@
 
     nnn
     vivaldi
+    inputs.zen-browser.packages."${system}".default
 
   ];
 
   # make vivaldi default browser
-  home.sessionVariables.BROWSER = "vivaldi";
+  home.sessionVariables.BROWSER = "zen";
 
   # choose kitty as main terminal
   gnome-hm.terminal = "kitty";

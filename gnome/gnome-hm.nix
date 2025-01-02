@@ -68,7 +68,7 @@
             "gsconnect@andyholmes.github.io"
         ];
         favorite-apps = [
-          "vivaldi-stable.desktop"
+          "zen.desktop"
           "org.gnome.Nautilus.desktop"
           "kitty.desktop"
           "codium.desktop"
