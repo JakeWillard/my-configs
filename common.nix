@@ -84,6 +84,7 @@
     xdg-utils
     pass
     popsicle
+    protonvpn-gui
     
   ];
 
