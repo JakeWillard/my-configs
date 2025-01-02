@@ -21,8 +21,8 @@
       distrobox-enter --name ubuntu -- sudo apt install -f
       distrobox-enter --name ubuntu -- sudo apt update
       distrobox-enter --name ubuntu -- sudo apt upgrade
+      distrobox-enter --name ubuntu -- distrobox-export --app zoom
     '';
-    export-zoom = "distrobox-enter --name ubuntu -- distrobox-export --app zoom";
     install-julia = "distrobox-enter --name ubuntu -- curl -fsSL https://install.julialang.org | sh";
     julia = "distrobox-enter --name ubuntu -- /home/jake/.juliaup/bin/julia";
   };
