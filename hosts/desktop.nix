@@ -10,6 +10,9 @@
     options snd_hda_intel power_save=0 power_save_controller=N
   '';
 
+  # gaming stuff
+  programs.steam.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
