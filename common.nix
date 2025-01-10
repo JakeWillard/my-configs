@@ -56,7 +56,7 @@
     isNormalUser = true;
     description = "jake";
     extraGroups = [ "networkmanager" "wheel" ];
-    initialPassword = "boop";
+    # initialPassword = "boop";
   };
 
   # Install firefox.
