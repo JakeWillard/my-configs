@@ -50,10 +50,10 @@
     profiles.default = {
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
-    };
-    extensions = with pkgs.vscode-extensions; [
+      extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
-  ];
+      ];
+    };
   };
 
   # configure git

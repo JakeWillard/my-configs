@@ -5,7 +5,7 @@
 
   imports = [
     ./gnome/gnome-sys.nix
-    ./distrobox/distrobox-sys.nix
+    # ./distrobox/distrobox-sys.nix
    ];
 
   # find base16 schemes here: https://tinted-theming.github.io/base16-gallery/
