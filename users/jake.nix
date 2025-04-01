@@ -19,7 +19,7 @@
     inputs.zen-browser.packages."${system}".default
 
   ];
-
+  
   # make vivaldi default browser
   home.sessionVariables.BROWSER = "zen";
 
@@ -47,8 +47,10 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-    enableExtensionUpdateCheck = false;
-    enableUpdateCheck = false;
+    profiles.default = {
+      enableExtensionUpdateCheck = false;
+      enableUpdateCheck = false;
+    };
     extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
   ];
