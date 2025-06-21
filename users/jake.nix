@@ -17,7 +17,6 @@
     nnn
     vivaldi
     inputs.zen-browser.packages."${system}".default
-    mathematica
 
   ];
   
