@@ -30,9 +30,9 @@
   };
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = false;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.wayland = false;
+  services.desktopManager.gnome.enable = true;
 
   # Remove some default GNOME packages.
   environment.gnome.excludePackages = with pkgs; [

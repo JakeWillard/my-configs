@@ -14,6 +14,15 @@
 
   # alias for updating the flake
   programs.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
+  programs.bash.shellAliases.nhclean = "nh clean all --keep 3 --keep-since 4d --ask";
+  programs.bash.shellAliases.nhrebuild = "nh os switch ~/my-configs --ask";
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "~/my-configs";
+  };
 
 
   # Enable networking
