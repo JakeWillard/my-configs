@@ -16,12 +16,12 @@
 
     nnn
     vivaldi
-    inputs.zen-browser.packages."${system}".default
+    # inputs.zen-browser.packages."${system}".default
 
   ];
   
   # make vivaldi default browser
-  home.sessionVariables.BROWSER = "zen";
+  home.sessionVariables.BROWSER = "vivaldi";
 
   # choose kitty as main terminal
   gnome-hm.terminal = "kitty";
@@ -59,8 +59,10 @@
   # configure git
   programs.git = {
     enable = true;
-    userName = "JakeWillard";
-    userEmail = "jacob.willard.gr@dartmouth.edu";
+    settings = {
+      user.name = "JakeWillard";
+      user.email = "jacob.willard.gr@dartmouth.edu";
+    };
   };
 
   # This value determines the home Manager release that your
