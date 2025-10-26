@@ -8,10 +8,10 @@
   options = {
 
 
-    gnome-sys.scheme = lib.mkOption {
-        type = lib.types.str;
-        default = "gruvbox-dark-hard";
-    };
+    # gnome-sys.scheme = lib.mkOption {
+    #     type = lib.types.str;
+    #     default = "gruvbox-dark-hard";
+    # };
 
 
 

@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
@@ -24,7 +24,7 @@
         ./common.nix
         ./hosts/desktop.nix
 
-        inputs.stylix.nixosModules.stylix
+        # inputs.stylix.nixosModules.stylix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
@@ -42,7 +42,7 @@
         ./common.nix 
         ./hosts/laptop.nix
 
-        inputs.stylix.nixosModules.stylix
+        # inputs.stylix.nixosModules.stylix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
