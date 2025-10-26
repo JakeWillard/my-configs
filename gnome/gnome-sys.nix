@@ -8,13 +8,6 @@
   options = {
 
 
-    # gnome-sys.scheme = lib.mkOption {
-    #     type = lib.types.str;
-    #     default = "gruvbox-dark-hard";
-    # };
-
-
-
   };
 
 
@@ -49,24 +42,6 @@
       gnome-maps 
       pkgs.gnome-connections
   ];
-
-  # # stylix theme
-  # stylix = {
-
-  #   enable = true;
-  #   base16Scheme = "${pkgs.base16-schemes}/share/themes/${config.gnome-sys.scheme}.yaml";
-  #   image = config.lib.stylix.pixel "base01";
-
-
-  # };
-
-  # environment.systemPackages = [
-
-  #   (import ./draw-wallpaper.nix {inherit pkgs; colors=config.lib.stylix.colors.withHashtag;})
-
-  # ];
-
-  # programs.bash.shellAliases.draw = "draw-wallpaper; gsettings set org.gnome.desktop.background picture-uri 'file:///home/jake/.wallpaper.png'; gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/jake/.wallpaper.png'";
 
 };
 

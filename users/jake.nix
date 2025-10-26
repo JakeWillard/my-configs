@@ -13,11 +13,8 @@
 
   # Packages that I'm not going to configure with nix
   home.packages = with pkgs; [
-
     nnn
     vivaldi
-    # inputs.zen-browser.packages."${system}".default
-
   ];
   
   # make vivaldi default browser

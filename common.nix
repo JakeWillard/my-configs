@@ -5,12 +5,7 @@
 
   imports = [
     ./gnome/gnome-sys.nix
-    # ./distrobox/distrobox-sys.nix
    ];
-
-  # find base16 schemes here: https://tinted-theming.github.io/base16-gallery/
-  # gnome-sys.scheme = "da-one-paper";
-
 
   # alias for updating the flake
   programs.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
@@ -97,13 +92,6 @@
     protonvpn-gui
     
   ];
-
-  # invidious youtube frontend
-  # services.invidious = {
-  #   enable = true;
-  #   nginx.enable = false;
-  #   port = 12345;
-  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

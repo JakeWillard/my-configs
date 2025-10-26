@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     home-manager = {
       url = "github:nix-community/home-manager";
       # The `follows` keyword in inputs is used for inheritance.
@@ -12,8 +11,6 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # stylix.url = "github:danth/stylix";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
@@ -23,8 +20,6 @@
       modules = [ 
         ./common.nix
         ./hosts/desktop.nix
-
-        # inputs.stylix.nixosModules.stylix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
@@ -41,8 +36,6 @@
       modules = [ 
         ./common.nix 
         ./hosts/laptop.nix
-
-        # inputs.stylix.nixosModules.stylix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
