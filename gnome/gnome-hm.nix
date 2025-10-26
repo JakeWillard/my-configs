@@ -61,12 +61,12 @@
       # enable gnome extensions
       "org/gnome/shell" = {
         disable-user-extensions = false;
-        enabled-extensions = [
-            "caffeine@patapon.info"
-            "pop-shell@system76.com"
-            "blur-my-shell@aunetx"
-            "gsconnect@andyholmes.github.io"
-        ];
+        # enabled-extensions = [
+        #     "caffeine@patapon.info"
+        #     "pop-shell@system76.com"
+        #     "blur-my-shell@aunetx"
+        #     "gsconnect@andyholmes.github.io"
+        # ];
         favorite-apps = [
           "vivaldi-stable.desktop"
           "org.gnome.Nautilus.desktop"
