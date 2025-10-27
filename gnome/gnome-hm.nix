@@ -44,29 +44,29 @@
       };
 
       # wallpaper shortcut
-      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-        binding = "<Control><Alt>w";
-        command = "bash -i -c 'draw'";
-        name = "generate-new-wallpaper";
-      };
+      # "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      #   binding = "<Control><Alt>w";
+      #   command = "bash -i -c 'draw'";
+      #   name = "generate-new-wallpaper";
+      # };
 
       # apply keyboard shortcuts
       "org/gnome/settings-daemon/plugins/media-keys" = {
         custom-keybindings = [
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+            # "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
           ];
       };
 
       # enable gnome extensions
       "org/gnome/shell" = {
         disable-user-extensions = false;
-        enabled-extensions = [
-            "caffeine@patapon.info"
-            "pop-shell@system76.com"
-            "blur-my-shell@aunetx"
-            "gsconnect@andyholmes.github.io"
-        ];
+        # enabled-extensions = [
+        #     "caffeine@patapon.info"
+        #     "pop-shell@system76.com"
+        #     "blur-my-shell@aunetx"
+        #     "gsconnect@andyholmes.github.io"
+        # ];
         favorite-apps = [
           "vivaldi-stable.desktop"
           "org.gnome.Nautilus.desktop"
