@@ -78,20 +78,20 @@
   };
 
 
-  home.packages = with pkgs; [
+  # home.packages = with pkgs; [
       
-      # gnome extensions
-      gnomeExtensions.burn-my-windows
-      gnomeExtensions.blur-my-shell
-      gnomeExtensions.caffeine
-      gnomeExtensions.pop-shell
+  #     # gnome extensions
+  #     gnomeExtensions.burn-my-windows
+  #     gnomeExtensions.blur-my-shell
+  #     gnomeExtensions.caffeine
+  #     gnomeExtensions.pop-shell
 
-  ];
+  # ];
 
-  services.kdeconnect = {
-    enable = true;
-    package = pkgs.gnomeExtensions.gsconnect;
-  };
+  # services.kdeconnect = {
+  #   enable = true;
+  #   package = pkgs.gnomeExtensions.gsconnect;
+  # };
 
   # set default programs
   home.sessionVariables = {
