@@ -90,6 +90,11 @@
     pass
     popsicle
     protonvpn-gui
+
+    (pkgs.python3.withPackages (python-pkgs: [
+      python-pkgs.numpy
+      python-pkgs.matplotlib
+    ]))
     
   ];
 
