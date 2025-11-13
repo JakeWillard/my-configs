@@ -5,6 +5,7 @@
 
   imports = [
     ./gnome/gnome-sys.nix
+    ./sci/sci.nix
    ];
 
   # alias for updating the flake

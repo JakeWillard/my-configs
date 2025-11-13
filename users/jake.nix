@@ -27,8 +27,8 @@
   programs.starship = {
     enable = true;
   };
-  programs.bash.enable = true;
-  programs.bash.shellAliases.liftoff = "eval '$(starship init bash)'";
+  # programs.bash.enable = true;
+  # programs.bash.shellAliases.liftoff = "eval '$(starship init bash)'";
 
   # configure kitty
   programs.kitty = lib.mkForce {
@@ -48,7 +48,8 @@
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
       extensions = with pkgs.vscode-extensions; [
-      jnoortheen.nix-ide
+        jnoortheen.nix-ide
+        julialang.language-julia
       ];
     };
   };
