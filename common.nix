@@ -17,7 +17,7 @@
   programs.nh = {
     enable = true;
     clean.enable = true;
-    clean.extraArgs = "--keep-since 30d --keep 3";
+    clean.extraArgs = "--keep-since 7d --keep 3";
     flake = "~/my-configs";
   };
 
@@ -91,11 +91,7 @@
     pass
     popsicle
     protonvpn-gui
-
-    (pkgs.python3.withPackages (python-pkgs: [
-      python-pkgs.numpy
-      python-pkgs.matplotlib
-    ]))
+    cowsay
     
   ];
 
