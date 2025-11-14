@@ -2,7 +2,6 @@
 { config, pkgs, ... }:
 
 {
-#asdf
   # maintainance aliases
   programs.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
   programs.bash.shellAliases.nhclean = "nh clean all --keep 3 --keep-since 7d --ask";

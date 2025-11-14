@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/jake";
 
   imports = [
-    ./../gnome/gnome-hm.nix
+    #./../gnome/gnome-hm.nix
   ];
 
   # Packages that I'm not going to configure with nix

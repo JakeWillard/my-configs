@@ -28,6 +28,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.jake.imports = [ 
             ./users/jake.nix
+            ./gnome/gnome-hm.nix
           ];
           home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux";};
         }
@@ -46,7 +47,10 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.jake.imports = [ ./users/jake.nix];
+          home-manager.users.jake.imports = [ 
+            ./users/jake.nix
+            ./gnome/gnome-hm.nix
+          ];
           home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux";};
         }
 
