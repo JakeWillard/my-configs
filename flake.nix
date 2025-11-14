@@ -18,13 +18,17 @@
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       system = "x88_64-linux";
       modules = [ 
-        ./common.nix
+        ./misc/basic.nix
+        ./misc/sci.nix
+        ./gnome/gnome-sys.nix
         ./hosts/desktop.nix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.jake.imports = [ ./users/jake.nix];
+          home-manager.users.jake.imports = [ 
+            ./users/jake.nix
+          ];
           home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux";};
         }
 
@@ -34,7 +38,9 @@
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       system = "x88_64-linux";
       modules = [ 
-        ./common.nix 
+        ./misc/basic.nix
+        ./misc/sci.nix
+        ./gnome/gnome-sys.nix
         ./hosts/laptop.nix
         
         home-manager.nixosModules.home-manager {

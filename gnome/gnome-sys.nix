@@ -2,9 +2,6 @@
 
 {
 
-  #imports = [ ./wallpaper.nix ];
-
-
   options = {
 
 

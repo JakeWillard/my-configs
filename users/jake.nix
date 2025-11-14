@@ -8,9 +8,6 @@
     ./../gnome/gnome-hm.nix
   ];
 
-  # enable colloid icons
-  gnome-hm.colloid = true;
-
   # Packages that I'm not going to configure with nix
   home.packages = with pkgs; [
     nnn
@@ -19,9 +16,6 @@
   
   # make vivaldi default browser
   home.sessionVariables.BROWSER = "vivaldi";
-
-  # choose kitty as main terminal
-  gnome-hm.terminal = "kitty";
 
   # configure kitty
   programs.kitty = lib.mkForce {

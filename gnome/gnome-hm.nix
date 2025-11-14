@@ -3,14 +3,6 @@
 {
 
   options = {
-
-    gnome-hm.colloid = lib.mkEnableOption "Colloid Icons";
-    gnome-hm.papirus = lib.mkEnableOption "Papirus Icons";
-    gnome-hm.terminal = lib.mkOption {
-      type = lib.types.str;
-      default = "xterm";
-
-    };
     
   };
 
@@ -20,12 +12,9 @@
     # help: https://determinate.systems/posts/declarative-gnome-configuration-with-nixos/
 
     gtk.enable = true;
-    gtk.iconTheme = lib.optionalAttrs config.gnome-hm.colloid {
+    gtk.iconTheme = {
       name = "Colloid";
       package = pkgs.colloid-icon-theme;
-    } // lib.optionalAttrs config.gnome-hm.papirus {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
     };
 
 
@@ -39,16 +28,9 @@
       # terminal shortcut
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
         binding = "<Control><Alt>t";
-        command = "${config.gnome-hm.terminal}";
+        command = "kitty";
         name = "open-terminal";
       };
-
-      # wallpaper shortcut
-      # "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      #   binding = "<Control><Alt>w";
-      #   command = "bash -i -c 'draw'";
-      #   name = "generate-new-wallpaper";
-      # };
 
       # apply keyboard shortcuts
       "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -60,13 +42,6 @@
 
       # enable gnome extensions
       "org/gnome/shell" = {
-        disable-user-extensions = false;
-        # enabled-extensions = [
-        #     "caffeine@patapon.info"
-        #     "pop-shell@system76.com"
-        #     "blur-my-shell@aunetx"
-        #     "gsconnect@andyholmes.github.io"
-        # ];
         favorite-apps = [
           "vivaldi-stable.desktop"
           "org.gnome.Nautilus.desktop"
@@ -78,25 +53,10 @@
   };
 
 
-  # home.packages = with pkgs; [
-      
-  #     # gnome extensions
-  #     gnomeExtensions.burn-my-windows
-  #     gnomeExtensions.blur-my-shell
-  #     gnomeExtensions.caffeine
-  #     gnomeExtensions.pop-shell
-
-  # ];
-
-  # services.kdeconnect = {
-  #   enable = true;
-  #   package = pkgs.gnomeExtensions.gsconnect;
-  # };
-
   # set default programs
   home.sessionVariables = {
     EDITOR = "gnome-text-editor";
-    TERMINAL = "${config.gnome-hm.terminal}";
+    TERMINAL = "kitty";
   };
 
 
