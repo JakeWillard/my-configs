@@ -44,10 +44,8 @@
   # configure git
   programs.git = {
     enable = true;
-    settings = {
-      user.name = "JakeWillard";
-      user.email = "jacob.willard.gr@dartmouth.edu";
-    };
+    userName = "JakeWillard";
+    userEmail = "jacob.willard.gr@dartmouth.edu";
   };
 
   # This value determines the home Manager release that your
