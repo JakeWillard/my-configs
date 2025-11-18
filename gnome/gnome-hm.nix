@@ -28,7 +28,8 @@
       # terminal shortcut
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
         binding = "<Control><Alt>t";
-        command = "kgx";
+        command = "kitty";
+        #command = "kgx";
         name = "open-terminal";
       };
 
@@ -45,7 +46,8 @@
         favorite-apps = [
           "vivaldi-stable.desktop"
           "org.gnome.Nautilus.desktop"
-          "org.gnome.Console.desktop"
+          "kitty.desktop"
+          #"org.gnome.Console.desktop"
           "codium.desktop"
         ];
       };
@@ -56,7 +58,8 @@
   # set default programs
   home.sessionVariables = {
     EDITOR = "gnome-text-editor";
-    TERMINAL = "kgx";
+    TERMINAL = "kitty";
+    #TERMINAL = "kgx";
   };
 
 

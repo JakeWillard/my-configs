@@ -4,8 +4,8 @@
 {
   # maintainance aliases
   programs.bash.shellAliases.update = "sudo nix flake update --flake ~/my-configs";
-  programs.bash.shellAliases.nhclean = "nh clean all --keep 3 --keep-since 7d --ask";
-  programs.bash.shellAliases.nhrebuild = "nh os switch ~/my-configs --ask";
+  programs.bash.shellAliases.nhc = "nh clean all --keep 3 --keep-since 7d --ask";
+  programs.bash.shellAliases.nhr = "nh os switch ~/my-configs --ask";
   programs.bash.shellAliases.store-repair = "sudo nix-store --verify --check-contents --repair";
 
   programs.nh = {
