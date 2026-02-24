@@ -44,8 +44,10 @@
   # configure git
   programs.git = {
     enable = true;
-    userName = "JakeWillard";
-    userEmail = "jacob.willard.gr@dartmouth.edu";
+    settings.user = {
+      name = "JakeWillard";
+      email = "jacob.willard.gr@dartmouth.edu";
+    };
   };
 
   # This value determines the home Manager release that your
@@ -56,7 +58,7 @@
   # You can update home Manager without changing this value. See
   # the home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "24.05";
+  home.stateVersion = "25.05";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;

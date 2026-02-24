@@ -12,5 +12,6 @@
     (a) copy hardware config into host file. 
     (b) copy stateVersion into host file. 
     (c) make sure the correct hostname is in the host file. 
+    (d) ensure that the stateVersion is the same in home manager.
 
 (6) run "sudo nixos-rebuild switch --flake ~/my-configs/#<hostname>"
