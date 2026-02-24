@@ -2,6 +2,8 @@
 { config, pkgs, ... }:
 
 {
+
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -59,6 +61,17 @@
       gnome-logs 
       gnome-maps 
       pkgs.gnome-connections
+  ];
+
+  environment.systemPackages = with pkgs; [
+
+    vim 
+    wget
+    curl
+    xdg-utils
+    pass
+    git
+    
   ];
 
   # NEEDED FOR NVIDIA
