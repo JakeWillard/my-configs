@@ -4,7 +4,7 @@
 
 (2) make configs. 
 
-(3) copy installing-essential.nix into the configuration. Then run the install process. 
+(3) copy installing-essentials.nix into the configuration. Then run the install process. 
 
 (4) upon reboot, clone repository into home folder. 
 
