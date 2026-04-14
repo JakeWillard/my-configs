@@ -25,6 +25,9 @@
       # julia
       (import ./run-julia.nix { inherit pkgs; })
 
+      # inkscape
+      inkscape-with-extensions
+
   ];
 
 
