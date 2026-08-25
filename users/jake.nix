@@ -12,7 +12,6 @@
   home.packages = with pkgs; [
     nnn
     vivaldi
-    notesnook
   ];
   
   # make vivaldi default browser

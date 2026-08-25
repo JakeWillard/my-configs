@@ -86,6 +86,7 @@
     # protonvpn-gui
     cowsay
 
+    notesnook
   ];
 
 }
