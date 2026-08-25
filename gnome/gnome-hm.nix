@@ -49,6 +49,7 @@
           "kitty.desktop"
           #"org.gnome.Console.desktop"
           "codium.desktop"
+          "notesnook.desktop"
         ];
       };
 

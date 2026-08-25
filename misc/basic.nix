@@ -85,7 +85,7 @@
     popsicle
     # protonvpn-gui
     cowsay
-    
+
   ];
 
 }
