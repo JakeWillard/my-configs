@@ -72,7 +72,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-    neofetch
     zip
     xz
     unzip
@@ -85,8 +84,6 @@
     popsicle
     # protonvpn-gui
     cowsay
-
-    notesnook
   ];
 
 }
