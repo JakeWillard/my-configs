@@ -16,7 +16,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
 
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-      system = "x88_64-linux";
+      # system = "x88_64-linux";
       modules = [ 
         ./misc/basic.nix
         ./misc/sci.nix
@@ -37,7 +37,7 @@
     };
 
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      system = "x88_64-linux";
+      # system = "x88_64-linux";
       modules = [ 
         ./misc/basic.nix
         ./misc/sci.nix
