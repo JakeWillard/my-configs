@@ -68,6 +68,10 @@
   # enable flakes
   nix.settings.experimental-features= [ "nix-command" "flakes" ];
 
+  networking.networkmanager.plugins = with pkgs; [
+    networkmanager-openconnect
+  ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
